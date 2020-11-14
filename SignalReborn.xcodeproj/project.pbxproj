@@ -721,8 +721,8 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.charliewhile.SignalReborn;
+				MARKETING_VERSION = 2.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalReborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -751,8 +751,8 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.charliewhile.SignalReborn;
+				MARKETING_VERSION = 2.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalReborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -780,9 +780,9 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.1;
 				OTHER_SWIFT_FLAGS = "-D jailed $(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.charliewhile.SignalReborn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalReborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -811,9 +811,9 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.1;
 				OTHER_SWIFT_FLAGS = "-D jailed $(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.charliewhile.SignalReborn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalReborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
