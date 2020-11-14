@@ -109,7 +109,7 @@ extension InformationController {
         let alert = UIAlertController(title: "Purge Database", message: "Doing this will remove all cached cells. It may take up to 24 hours for cells to start reappearing. The app will restart.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Nope, go back", style: .default, handler: nil))
         alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { action in
-            SignalController.sharedRootController.purge()
+            DatabaseManager.shared.purgeTheDatabase()
             fatalError("Database Purged")
         }))
         self.present(alert, animated: true)

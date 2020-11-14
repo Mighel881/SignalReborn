@@ -10,7 +10,6 @@
 		530B3EB4249EF47A00BE4276 /* customMapViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B3EB3249EF47A00BE4276 /* customMapViews.swift */; };
 		530B7F4B24B25FEB003DD58E /* creditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B7F4A24B25FEB003DD58E /* creditViewController.swift */; };
 		530B7F4D24B26491003DD58E /* creditsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B7F4C24B26491003DD58E /* creditsCell.swift */; };
-		5325F30A24B0EBF2004208F1 /* rootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5325F30924B0EBF2004208F1 /* rootController.m */; };
 		5327204824B3C1530098EB90 /* helpTheCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327204724B3C1530098EB90 /* helpTheCache.swift */; };
 		532F40472527FFAB008BED0F /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F40452527FFAB008BED0F /* SocialCell.swift */; };
 		532F40482527FFAB008BED0F /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F40452527FFAB008BED0F /* SocialCell.swift */; };
@@ -32,7 +31,6 @@
 		533BB96C251F860300CBFF0D /* InformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53390B532498BE4E002CA74E /* InformationController.swift */; };
 		533BB96D251F860300CBFF0D /* creditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B7F4A24B25FEB003DD58E /* creditViewController.swift */; };
 		533BB96E251F860300CBFF0D /* SegmentedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A427AC251BC1830014DB06 /* SegmentedCell.swift */; };
-		533BB96F251F860300CBFF0D /* rootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5325F30924B0EBF2004208F1 /* rootController.m */; };
 		533BB970251F860300CBFF0D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53390B512498BE4E002CA74E /* MainViewController.swift */; };
 		533BB971251F860300CBFF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53390B4D2498BE4E002CA74E /* AppDelegate.swift */; };
 		533BB972251F860300CBFF0D /* CSVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5346C2C52514B712009D26A0 /* CSVController.swift */; };
@@ -75,9 +73,6 @@
 		530B3EB3249EF47A00BE4276 /* customMapViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customMapViews.swift; sourceTree = "<group>"; };
 		530B7F4A24B25FEB003DD58E /* creditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creditViewController.swift; sourceTree = "<group>"; };
 		530B7F4C24B26491003DD58E /* creditsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creditsCell.swift; sourceTree = "<group>"; };
-		5325F30924B0EBF2004208F1 /* rootController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rootController.m; sourceTree = "<group>"; };
-		5325F30B24B0EBFF004208F1 /* NSTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTask.h; sourceTree = "<group>"; };
-		5325F30C24B102AB004208F1 /* rootController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rootController.h; sourceTree = "<group>"; };
 		5327204724B3C1530098EB90 /* helpTheCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpTheCache.swift; sourceTree = "<group>"; };
 		532F40452527FFAB008BED0F /* SocialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCell.swift; sourceTree = "<group>"; };
 		532F40462527FFAB008BED0F /* SocialCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialCell.xib; sourceTree = "<group>"; };
@@ -255,9 +250,6 @@
 			children = (
 				537F041F249C451500EAC7FA /* SRMonitor.h */,
 				537F0420249C452500EAC7FA /* SRMonitor.m */,
-				5325F30924B0EBF2004208F1 /* rootController.m */,
-				5325F30C24B102AB004208F1 /* rootController.h */,
-				5325F30B24B0EBFF004208F1 /* NSTask.h */,
 			);
 			path = "Objective C Sources";
 			sourceTree = "<group>";
@@ -524,7 +516,6 @@
 				53390B542498BE4E002CA74E /* InformationController.swift in Sources */,
 				530B7F4B24B25FEB003DD58E /* creditViewController.swift in Sources */,
 				53A427AE251BC1840014DB06 /* SegmentedCell.swift in Sources */,
-				5325F30A24B0EBF2004208F1 /* rootController.m in Sources */,
 				53390B522498BE4E002CA74E /* MainViewController.swift in Sources */,
 				533BB9A02520B0AE00CBFF0D /* UserDefaults+Extension.swift in Sources */,
 				53390B4E2498BE4E002CA74E /* AppDelegate.swift in Sources */,
@@ -551,7 +542,6 @@
 				533BB96C251F860300CBFF0D /* InformationController.swift in Sources */,
 				533BB96D251F860300CBFF0D /* creditViewController.swift in Sources */,
 				533BB96E251F860300CBFF0D /* SegmentedCell.swift in Sources */,
-				533BB96F251F860300CBFF0D /* rootController.m in Sources */,
 				533BB970251F860300CBFF0D /* MainViewController.swift in Sources */,
 				533BB9A12520B0AE00CBFF0D /* UserDefaults+Extension.swift in Sources */,
 				533BB971251F860300CBFF0D /* AppDelegate.swift in Sources */,

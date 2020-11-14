@@ -30,6 +30,24 @@ class DatabaseManager {
         return false
     }
     
+    @discardableResult func purgeTheDatabase() -> Bool {
+        let fileManager = FileManager.default
+        let paths: [String] = [
+            "/var/root/Library/Caches/locationd/cache_encryptedB.db",
+            "/var/root/Library/Caches/locationd/cache_encryptedB.db-shm",
+            "/var/root/Library/Caches/locationd/cache_encryptedB.db-wal"
+        ]
+        
+        do {
+            for path in paths {
+                try fileManager.removeItem(atPath: path)
+            }
+            return true
+        } catch {
+            return false
+        }
+    }
+    
     //MARK: - What converts the table into codable cells
     func prepareCells() {
         do {

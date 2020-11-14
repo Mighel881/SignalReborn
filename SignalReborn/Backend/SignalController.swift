@@ -12,7 +12,6 @@ import MapKit
 
 class SignalController {
     static let sharedMonitor = SRMonitor()
-    static let sharedRootController = rootController()
     static let shared = SignalController()
     static let connection = SignalController.sharedMonitor.setupServerAndNotifications()
     
