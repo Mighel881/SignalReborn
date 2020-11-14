@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class CSVController {
-    //The CSV is bundled with the tweak, and can be found in /var/mobile/Library/Application\\ Support/SignalReborn
     static let shared = CSVController()
     
     var carriers = [Carrier]()
@@ -18,8 +17,10 @@ class CSVController {
     //MARK: - For loading the CSV into memory to be used by the Database and Cell Controller
     func readDataFromCSV() {
         do {
-            let contents = try String(contentsOfFile: "/var/mobile/Library/Application Support/SignalReborn/CarrierDatabase.csv", encoding: .utf8)
-            csv(data: contents)
+            if let url = Bundle.main.path(forResource: "CarrierDatabase", ofType: "csv") {
+                let contents = try String(contentsOfFile: url, encoding: .utf8)
+                csv(data: contents)
+            } 
         } catch {
             return
         }

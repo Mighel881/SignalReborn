@@ -16,34 +16,17 @@ class DatabaseManager {
     var cells = [Cell]()
     
     //MARK: - Stealing the database from locationd
-    func copyTheDatabase() -> Bool {
-    
-        #if jailed
-        let message = "asdasd"
+    @discardableResult func copyTheDatabase() -> Bool {
+        #if Jailed
         #else
-        let message = SignalController.sharedRootController.copyFiles()
-        #endif
-
-        switch (message) {
-            case "Permission Error\n":
-                //Permission errors
-                return false
-            case "Not found\n":
-                //BinaryNotFound
-                return false
-            case "Error\n":
-                //Failed to launch task
-                return false
-            default:
-                //Everything worked
-                do {
-                    let database = try Connection("/var/mobile/Library/Application Support/SignalReborn/SignalCache.db")
-                    self.database = database
-                    return true
-                } catch {
-                    print(error)
-                }
+        do {
+            let database = try Connection("/var/root/Library/Caches/locationd/cache_encryptedB.db")
+            self.database = database
+            return true
+        } catch {
+            print(error)
         }
+        #endif
         return false
     }
     
@@ -63,9 +46,9 @@ class DatabaseManager {
             let TAC = Expression<Int>("TAC")
             let confidence = Expression<Int>("Confidence")
             
-            let lteCells = try DatabaseManager.shared.database.prepare(lteCellTable)
-            let gsmCells = try DatabaseManager.shared.database.prepare(gsmCellTable)
-            let cdmaCells = try DatabaseManager.shared.database.prepare(cdmaCellTable)
+            let lteCells = try self.database.prepare(lteCellTable)
+            let gsmCells = try self.database.prepare(gsmCellTable)
+            let cdmaCells = try self.database.prepare(cdmaCellTable)
             
             for cell in lteCells {
                 let lat = CLLocationDegrees(cell[Latitude])

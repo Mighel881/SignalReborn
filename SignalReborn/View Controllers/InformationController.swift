@@ -33,7 +33,7 @@ class InformationController: UIViewController {
         InfoPageCell(identifier: "SocialCell", data:
                         ["imageName" : "discord", "label" : "Join my Discord", "link" : "https://discord.gg/KNZRvGe"]),
         InfoPageCell(identifier: "SocialCell", data:
-                        ["imageName" : "CharlieWhile13", "label" : "Follow me on Twitter", "link" : "https://twitter.com/elihweilrahc13"]),
+                        ["label" : "Amy - Follow me on Twitter", "link" : "https://twitter.com/elihweilrahc13", "twitterPFP" : "TwitterPFP"]),
         InfoPageCell(identifier: "SocialCell", data:
                         ["imageName" : "Github", "label" : "View on Github", "link" : "https://github.com/CharlieWhile13/SignalReborn"])
     ]
@@ -53,6 +53,7 @@ class InformationController: UIViewController {
         self.setup()
     }
     
+//MARK: - Organise the dynamic data
     @objc func organiseData() {
         var uwu = [[InfoPageCell]]()
         
@@ -76,6 +77,8 @@ class InformationController: UIViewController {
                 
         self.tableView.reloadData()
     }
+    
+//MARK: - Table View Setup
     
     func setup() {
         self.tableView.register(UINib(nibName: "InfoCell", bundle: nil), forCellReuseIdentifier: "InfoCell")
@@ -145,39 +148,44 @@ extension InformationController: UITableViewDataSource {
     
     //This will probably be cleaned up at some point, I don't like it :fr:
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if toShow[indexPath.section][indexPath.row].identifier == "SettingsSwitchCell" {
+        let currentData = toShow[indexPath.section][indexPath.row]
+        if currentData.identifier == "SettingsSwitchCell" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsSwitchCell", for: indexPath) as! SettingsSwitchCell
-            cell.prefsName = toShow[indexPath.section][indexPath.row].data["prefsName"] as! String
-            cell.notificationName = toShow[indexPath.section][indexPath.row].data["notificationName"] as! String
-            cell.label.text = toShow[indexPath.section][indexPath.row].data["cellName"] as? String
-            cell.prefsSwitch.isOn = toShow[indexPath.section][indexPath.row].data["default"] as! Bool
+            cell.prefsName = currentData.data["prefsName"] as! String
+            cell.notificationName = currentData.data["notificationName"] as! String
+            cell.label.text = currentData.data["cellName"] as? String
+            cell.prefsSwitch.isOn = currentData.data["default"] as! Bool
             cell.setup()
             return cell
-        } else if toShow[indexPath.section][indexPath.row].identifier == "SegmentedCell" {
+        } else if currentData.identifier == "SegmentedCell" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SegmentedCell", for: indexPath) as! SegmentedCell
-            cell.prefsName = toShow[indexPath.section][indexPath.row].data["prefsName"] as! String
-            cell.notificationName = toShow[indexPath.section][indexPath.row].data["notificationName"] as! String
-            cell.segments = toShow[indexPath.section][indexPath.row].data["segments"] as! [String]
-            cell.defaultValue = toShow[indexPath.section][indexPath.row].data["default"] as! Int
+            cell.prefsName = currentData.data["prefsName"] as! String
+            cell.notificationName = currentData.data["notificationName"] as! String
+            cell.segments = currentData.data["segments"] as! [String]
+            cell.defaultValue = currentData.data["default"] as! Int
             cell.setup()
             return cell
-        } else if toShow[indexPath.section][indexPath.row].identifier == "ButtonCell" {
+        } else if currentData.identifier == "ButtonCell" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath) as! ButtonCell
-            cell.notificationName = toShow[indexPath.section][indexPath.row].data["notificationName"] as! String
-            cell.buttonName = toShow[indexPath.section][indexPath.row].data["buttonName"] as! String
+            cell.notificationName = currentData.data["notificationName"] as! String
+            cell.buttonName = currentData.data["buttonName"] as! String
             cell.setup()
             return cell
-        } else if toShow[indexPath.section][indexPath.row].identifier == "InfoCell" {
+        } else if currentData.identifier == "InfoCell" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath) as! InfoCell
-            cell.descriptionLabel.text = toShow[indexPath.section][indexPath.row].data["descriptionLabel"] as? String
-            cell.specificLabel.text = toShow[indexPath.section][indexPath.row].data["specificLabel"] as? String
+            cell.descriptionLabel.text = currentData.data["descriptionLabel"] as? String
+            cell.specificLabel.text = currentData.data["specificLabel"] as? String
             cell.setup()
             return cell
-        } else if toShow[indexPath.section][indexPath.row].identifier == "SocialCell" {
+        } else if currentData.identifier == "SocialCell" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SocialCell", for: indexPath) as! SocialCell
-            cell.labelText = toShow[indexPath.section][indexPath.row].data["label"] as! String
-            cell.imageName = toShow[indexPath.section][indexPath.row].data["imageName"] as! String
-            cell.link = toShow[indexPath.section][indexPath.row].data["link"] as! String
+            cell.labelText = currentData.data["label"] as! String
+            if let icon = currentData.data["twitterPFP"] {
+                cell.imageName = icon as! String
+            } else {
+                cell.imageName = currentData.data["imageName"] as! String
+            }
+            cell.link = currentData.data["link"] as! String
             cell.setup()
             return cell
         }

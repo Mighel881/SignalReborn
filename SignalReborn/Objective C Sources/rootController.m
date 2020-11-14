@@ -9,13 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "rootController.h"
 
-
 @implementation rootController
--(NSString *)copyFiles {
-    [self runCommandInPath:@"cp /var/root/Library/Caches/locationd/cache_encryptedB.db-wal /var/mobile/Library/Application\\ Support/SignalReborn/SignalCache.db-wal" asRoot:YES];
-    [self runCommandInPath:@"cp /var/root/Library/Caches/locationd/cache_encryptedB.db-shm /var/mobile/Library/Application\\ Support/SignalReborn/SignalCache.db-shm" asRoot:YES];
-    return([self runCommandInPath:@"cp /var/root/Library/Caches/locationd/cache_encryptedB.db /var/mobile/Library/Application\\ Support/SignalReborn/SignalCache.db" asRoot:YES]);
-}
+
 -(void)purge {
     [self runCommandInPath:@"rm -rf /var/root/Library/Caches/locationd/cache_encryptedB.db" asRoot:YES];
     [self runCommandInPath:@"rm -rf /var/root/Library/Caches/locationd/cache_encryptedB.db-shm" asRoot:YES];

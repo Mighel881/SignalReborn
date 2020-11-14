@@ -31,5 +31,11 @@
             <string>public-signal-strength</string>
             <string>bb-xpc</string>
         </array>
+        <key>com.apple.security.exception.files.absolute-path.read-write</key>
+        <array>
+          <string>/var/root/Library/Caches/locationd/cache_encryptedB.db</string>
+          <string>/var/root/Library/Caches/locationd/cache_encryptedB.db-shm</string>
+          <string>/var/root/Library/Caches/locationd/cache_encryptedB.db-wal</string>
+        </array>
     </dict>
 </plist>

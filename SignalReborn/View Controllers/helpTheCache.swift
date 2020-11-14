@@ -26,7 +26,7 @@ class helpTheCache: UIViewController {
     
     @IBAction func purgeButton(_ sender: Any) {
         SignalController.sharedRootController.purge()
-        _ = SignalController.sharedRootController.copyFiles()
+        DatabaseManager.shared.copyTheDatabase()
         let newAlert = UIAlertController(title: "Purge Successful", message: "Now follow the other steps!", preferredStyle: .alert)
         newAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(newAlert, animated: true)
